@@ -1,0 +1,40 @@
+body{background-color: #FFF7F5;}
+header{
+    position: fixed;
+    border: solid black 1px;
+    height: 100px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+header h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 37px;
+}
+
+.hamburger{
+    height: 30px;
+    width: 40px;
+    margin-top: 33px;
+}
+
+.hamburger div{
+    position: relative;
+    height: 2px;
+    background-color: black;
+    margin: 5px 0px 5px auto;
+}
+.hamburger div:nth-child(1){
+    width: 100%;
+}
+
+.hamburger div:nth-child(2){
+    width: 60%;
+}
+.hamburger div:nth-child(3){
+    width: 75%;
+}
