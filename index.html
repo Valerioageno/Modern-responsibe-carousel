@@ -54,8 +54,40 @@
             border-collapse: collapse;
             border-spacing: 0;
         }
+
+        button {
+            border: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+            overflow: visible;
+            outline: none;
+            background: transparent;
+
+            /* inherit font & color from ancestor */
+            color: inherit;
+            font: inherit;
+
+            /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+            line-height: normal;
+
+            /* Corrects font smoothing for webkit */
+            -webkit-font-smoothing: inherit;
+            -moz-osx-font-smoothing: inherit;
+
+            /* Corrects inability to style clickable `input` types in iOS */
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+
+        /* Remove excess padding and border in Firefox 4+ */
+        button::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+            outline: none;
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -68,5 +100,32 @@
                 <div></div>
             </div>
     </header>
+    <section>
+        <div class="left--container container">
+            <div class="text-container">
+                <h1>Explore your<br>next destination.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in eu sem hendrerit volutpat leo fusce.</p>
+                <p>Viverra varius eu, tellus mattis lacus, malesuada. </p>
+            </div>
+            <div class="scroll--indicator">
+                <div></div>
+                <p>keep<br>scrolling</p>
+            </div>
+        </div>
+        <div class="center--container container">
+            <div class="carousel1--wrapper">
+                <img src="./assets/venice.jpg" alt="venice">
+            </div>
+        </div>
+        <div class="right--container container">
+            <div class="carousel2--wrapper">
+                <img src="./assets/buddah.jpg" alt="buddah">
+            </div>
+            <div class="buttons--wrapper">
+                <button><img src="./assets/left_arrow.svg" alt="left_arrow"></button>
+                <button><img src="./assets/right_arrow.svg" alt="right_arrow"></button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
