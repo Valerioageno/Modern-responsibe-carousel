@@ -1,20 +1,41 @@
-// Custom configuration
+/*
+ * CUSTOM CONFIGURATION OPTIONS
+ *
+ * enjoy!
+ */
 const duration = 2;             //duration time
 const ease = "power4.inOut";    //GSAP ease type
 const enableTouch = true;       //enable touch event
+
+/*
+ * SYSYEM CONFIGURATION
+ *
+ * don't change this!
+ */
 
 let state = 1;
 const elements = document.querySelectorAll('.carousel1--wrapper img').length;
 let carouselWidth = document.getElementById('carousel1').offsetWidth;
 let carouselWidth2 = document.getElementById('carousel2').offsetWidth;
+window.onresize = correctWrappersSize;
+disableButtons();
+//Touch configuration
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
+var xDown = null;                                                        
+var yDown = null;
+
+/*
+ * SYSYEM FUNCTIONS
+ *
+ * where the magic happen
+ */
 
 function correctWrappersSize(){
     carouselWidth = document.getElementById('carousel1').offsetWidth;
     carouselWidth2 = document.getElementById('carousel2').offsetWidth;
     document.querySelectorAll('.carousel1--wrapper img')[state-1].style.left = 0;
 }
-
-window.onresize = correctWrappersSize;
 
 function moveToRight(){
     
@@ -56,19 +77,6 @@ function disableButtons(){
         for (let i = 0; i < btn.length; i++) {btn[i].style.filter = 'invert(0%) sepia(2%) saturate(15%) hue-rotate(344deg) brightness(103%) contrast(100%)'; }
     }
 }
-
-disableButtons();
-
-/*
- * Handle Touch listener
- *
- */
-
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchmove', handleTouchMove, false);
-
-var xDown = null;                                                        
-var yDown = null;
 
 function getTouches(evt) {
   return evt.touches ||             // browser API
