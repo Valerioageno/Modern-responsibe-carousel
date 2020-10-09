@@ -18,9 +18,9 @@ section{position: relative;height: 900px;width: 100%; padding-left: 100px; paddi
 .text-container h1{font-family: 'Montserrat', sans-serif;font-weight: 700;font-size: 70px;width: 650px;margin-bottom: 20px;}
 .text-container p{font-family: 'Montserrat', sans-serif;font-weight: 400;font-size: 20px;line-height: 1.4em;max-width: 390px;margin-top: 20px;}
 
-.carousel1--wrapper{position: relative; height: 100%;width: 470px;top: 50%;transform: translateY(-50%);margin: 0 auto; overflow: hidden;}
+.carousel1--wrapper{position: relative; height: 100%;width: 470px;top: 50%;transform: translateY(-50%);margin: 0 auto; overflow: hidden; display: flex;}
 .carousel1--wrapper img{position: relative;max-width: 100%;height: 100%;object-fit: cover}
-.carousel2--wrapper{position: relative; height: 620px;width: 380px;top: 50%;transform: translateY(-50%);margin: auto 0px auto auto; overflow: hidden;}
+.carousel2--wrapper{position: relative; height: 620px;width: 380px;top: 50%;transform: translateY(-50%);margin: auto 0px auto auto; overflow: hidden; display: flex;}
 .carousel2--wrapper img{position: relative;max-width: 100%;height: 100%;object-fit: cover;}
 
 .scroll--indicator{position: relative;height: 90px;display: flex;margin-top: 245px;}
