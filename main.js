@@ -14,6 +14,7 @@ const enableTouch = true;       //enable touch event
  */
 
 let state = 1;
+let depotentiator = 1;
 const elements = document.querySelectorAll('.carousel1--wrapper img').length;
 let carouselWidth = document.getElementById('carousel1').offsetWidth;
 let carouselWidth2 = document.getElementById('carousel2').offsetWidth;
@@ -40,9 +41,10 @@ function correctWrappersSize(){
 function moveToRight(){
     
     if (state != 1) {
-        gsap.to('.carousel1--wrapper img', {x: carouselWidth*(state-2), duration: duration,ease: ease});
-        gsap.to('.carousel2--wrapper img', {x: carouselWidth2*(state-2), duration: duration,ease: ease});
+        gsap.to('.carousel1--wrapper img', {x: carouselWidth*depotentiator, duration: duration,ease: ease});
+        gsap.to('.carousel2--wrapper img', {x: carouselWidth2*depotentiator, duration: duration,ease: ease});
         state--;
+        depotentiator++;
     }
 
     disableButtons();
@@ -54,6 +56,7 @@ function moveToLeft(){
         gsap.to('.carousel1--wrapper img', {x: - carouselWidth*state, duration: duration,ease: "power4.inOut"});
         gsap.to('.carousel2--wrapper img', {x: - carouselWidth2*state, duration: duration,ease: "power4.inOut"});
         state++;
+        depotentiator--;
     }
 
     disableButtons();
