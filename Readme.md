@@ -1,6 +1,8 @@
 <h2 style="text-align: center">Modern Customizable Smooth Carousel</h2>
 <br>
-<img src="https://www.valerioageno.com/demo_assets/demo.gif" alt="demo_gif">
+
+![demo](./light_demo.gif)
+
 <br>
 <h3>Key features:</h3>
 <ul>
